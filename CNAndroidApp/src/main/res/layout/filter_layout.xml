@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp"
+    android:clipToPadding="false"
+    android:scrollbarStyle="outsideOverlay"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/content_filter_button"
+            android:clickable="true"
+            android:gravity="center|start|left"
+            android:background="@drawable/selector_white_object"
+            android:layout_marginBottom="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/show_content"
+                android:textSize="18sp"
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/post_ic"
+                android:src="@drawable/ic_post_no_bg"
+                android:layout_width="@dimen/content_icon_dim"
+                android:layout_height="@dimen/content_icon_dim" />
+
+            <ImageView
+                android:id="@+id/poll_ic"
+                android:src="@drawable/ic_poll_colored"
+                android:layout_width="@dimen/content_icon_dim"
+                android:layout_height="@dimen/content_icon_dim" />
+
+            <ImageView
+                android:id="@+id/quiz_ic"
+                android:src="@drawable/ic_quiz"
+                android:layout_width="@dimen/content_icon_dim"
+                android:layout_height="@dimen/content_icon_dim" />
+
+            <ImageView
+                android:id="@+id/event_ic"
+                android:src="@drawable/ic_event"
+                android:layout_width="@dimen/content_icon_dim"
+                android:layout_height="@dimen/content_icon_dim" />
+
+            <ImageView
+                android:id="@+id/classcast_ic"
+                android:src="@drawable/ic_classcast"
+                android:layout_width="@dimen/content_icon_dim"
+                android:layout_height="@dimen/content_icon_dim" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sort_text"
+            android:text="@string/sort"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/content_toggle"
+            android:paddingTop="@dimen/dialog_padding"
+            android:paddingBottom="@dimen/dialog_padding"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/selector_white_object"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/visibility_ic"
+                android:src="@drawable/ic_globe_color"
+                android:layout_marginRight="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_width="@dimen/content_icon_dim"
+                android:layout_height="@dimen/content_icon_dim" />
+
+            <TextView
+                android:id="@+id/visibility_text"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/first_group"
+            android:divider="@color/black"
+            android:layout_marginBottom="5dp"
+            android:showDividers="middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/filter_text"
+            android:text="@string/filter"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/second_group"
+            android:divider="@color/black"
+            android:showDividers="middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>

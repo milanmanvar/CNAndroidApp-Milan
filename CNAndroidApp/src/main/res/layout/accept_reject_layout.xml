@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/accept_reject_button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="11"
+        android:gravity="right"
+        android:paddingRight="20dp">
+
+        <Button
+            android:id="@+id/accept_button"
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:background="@drawable/green_button"
+            android:layout_weight="4"
+            android:layout_marginRight="5dp"
+            android:text="@string/accept"
+            style="@style/colleague_request_button_style"/>
+
+        <Button
+            android:id="@+id/reject_button"
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:background="@drawable/red_button"
+            android:text="@string/reject"
+            style="@style/colleague_request_button_style" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/accept_reject_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="right"
+        android:textStyle="italic"
+        android:paddingRight="40dp"/>
+
+</RelativeLayout>

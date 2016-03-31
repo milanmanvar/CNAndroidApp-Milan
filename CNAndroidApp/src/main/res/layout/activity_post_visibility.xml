@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DDDDDD"
+    tools:context="com.thecn.thecn.activities.PostVisibilityActivity"
+    tools:ignore="MergeRootFrame">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="5sp"
+        android:paddingRight="5sp"
+        android:gravity="right|center_vertical"
+        android:background="@drawable/background_mimic_navbar"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:text="@string/post_visibility"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"/>
+
+        <Button
+            android:id="@+id/update_visibility"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="0dp"
+            android:background="@drawable/grayish_button"
+            android:layout_weight=".3"
+            android:text="@string/post_visibility_update"
+            android:textColor="#222222"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <com.emilsjolander.components.stickylistheaders.StickyListHeadersListView
+        android:id="@android:id/list"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#AAAAAA"
+        android:dividerHeight="1dp"
+        tools:context="com.thecn.app.activities.navigation.NavigationDrawerFragment" />
+
+</LinearLayout>

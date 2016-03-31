@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="fuchsia">#FF00FF</color>
+    <color name="red">#FF0000</color>
+    <color name="gold">#F5D653</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="gray">#808080</color>
+    <color name="olive">#808000</color>
+    <color name="purple">#800080</color>
+    <color name="maroon">#800000</color>
+    <color name="aqua">#00FFFF</color>
+    <color name="lime">#00FF00</color>
+    <color name="teal">#008080</color>
+    <color name="green">#008000</color>
+    <color name="blue">#0000FF</color>
+    <color name="navy">#000080</color>
+    <color name="black">#000000</color>
+    <color name="about_bg">#2C2F37</color>
+
+    <color name="dark_green">#005000</color>
+
+    <color name="profile_yellow">#F5D753</color>
+    <color name="profile_blue">#3FA1E1</color>
+    <color name="follower_name">#3680bc</color>
+
+    <color name="navigation_drawer_item">#262c3a</color>
+    <color name="navigation_drawer_item_selected">#17223a</color>
+    <color name="navigation_drawer_item_color_neutral">#464c5a</color>
+    <color name="navigation_drawer_item_color_course">#3f7200</color>
+    <color name="navigation_drawer_item_color_conexus">#c57d0f</color>
+
+    <color name="background_color">#eeeeee</color>
+    <color name="base_listview_impressed">#888888</color>
+    <color name="post_button_color">#efefef</color>
+    <color name="mid_gray">#909090</color>
+    <color name="post_button_pressed">#bfbfbf</color>
+
+    <color name="very_dark_gray">#222222</color>
+    <color name="dark_gray">#ff464646</color>
+
+    <color name="anar_bar">#FFAA00</color>
+    <color name="anar_bar_border">#996600</color>
+    <color name="anar_bar_border_border">#774400</color>
+
+    <color name="notification_bar">#466282</color>
+    <color name="unread_notification_color">#edeff6</color>
+    <color name="very_light_gray">#f6f6f6</color>
+    <color name="extreme_light_gray">#fbfbfb</color>
+
+    <color name="light_gray">#cccccc</color>
+
+    <color name="user_position_instructor">#FFB466</color>
+    <color name="user_position">#BCD07C</color>
+    <color name="user_position_admin">#d9534e</color>
+
+    <color name="clear">#00000000</color>
+
+    <color name="poll_title_strip_divider_alpha">#20000000</color>
+
+    <color name="selected_color">#ff33b5e5</color>
+    <color name="darker_selected_color">#cf0385b5</color>
+    <color name="darkest_selected_color">#af016595</color>
+    <color name="post_icon_color">#3c9ad1</color>
+
+    <color name="link_color">#3eb8e5</color>
+
+    <color name="lesser_post_button_text">#8c8c8c</color>
+
+    <color name="nav_bar">#222222</color>
+
+    <color name="very_light_green">#99ec8c</color>
+    <color name="light_green">#69bc5c</color>
+    <color name="unsat_green">#50a243</color>
+
+    <color name="diamond_bg">#def2ff</color>
+    <color name="diamond_text">#3fa2e1</color>
+
+</resources>

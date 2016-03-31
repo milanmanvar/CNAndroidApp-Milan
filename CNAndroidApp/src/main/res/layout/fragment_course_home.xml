@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/course_header" />
+
+        <Button
+            android:id="@+id/about_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_field_label"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/tasks_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tasks_label"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/posts_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/posts_label"
+            android:textSize="24sp"/>
+
+        <Button
+            android:id="@+id/roster_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/roster_label"
+            android:textSize="24sp"/>
+    </LinearLayout>
+
+</ScrollView>

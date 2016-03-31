@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/loading_popup_width"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:gravity="center"
+    android:text="@string/searching"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    android:background="@drawable/loading_popup"/>

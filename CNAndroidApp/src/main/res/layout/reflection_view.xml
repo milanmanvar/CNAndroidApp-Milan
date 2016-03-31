@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip"
+    android:paddingTop="10dp"
+    android:paddingBottom="5dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/user_icon"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="This is the user's image"
+        android:src="@drawable/default_user_icon"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="3dp" />
+
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/user_icon"
+        android:layout_toRightOf="@id/user_icon"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:text="user name"/>
+
+    <TextView
+        android:id="@+id/reflection_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/content_text"
+        android:layout_below="@id/content_text"
+        android:textSize="12sp"
+        android:text="date"/>
+
+    <view
+        class="com.thecn.app.views.text.ClickDistinguisherTextView"
+        android:id="@+id/reflection_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#181818"
+        android:textSize="16sp"
+        android:text="content"
+        android:autoLink="web"
+        android:layout_below="@+id/user_icon"
+        android:layout_alignLeft="@+id/user_icon"
+        android:layout_alignStart="@+id/user_icon" />
+
+</RelativeLayout>

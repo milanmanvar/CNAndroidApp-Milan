@@ -1,0 +1,224 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:background="#DDDDDD"
+    tools:context="com.thecn.app.activities.createpost.CreatePostActivity"
+    tools:ignore="MergeRootFrame">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@drawable/background_mimic_navbar"
+        android:weightSum="4">
+
+        <ImageButton
+            android:id="@+id/cancel_button"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="3dp"
+            android:contentDescription="@string/back_button"
+            android:src="@drawable/ic_action_cancel_white"
+            android:background="@drawable/selector_create_post_header_btn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/create_post"
+            android:textSize="25sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/post_button"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="2"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/ic_action_send_now"
+            android:background="@drawable/selector_create_post_header_btn"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="7dip"
+        android:paddingRight="7dip"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/content_toggle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="20dp"
+                android:textColor="#666666"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/ic_action_group"
+                android:drawablePadding="15sp"
+                android:contentDescription="@string/post_visibility"
+                android:background="@drawable/grayish_button"/>
+
+            <EditText
+                android:layout_below="@id/content_toggle"
+                android:id="@+id/post_text"
+                android:hint="@string/post_hint"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:gravity="top"
+                android:minHeight="100dip"
+                android:padding="5dip"
+                android:inputType="textMultiLine"
+                android:background="@drawable/white_object"/>
+
+            <LinearLayout
+                android:id="@+id/lower_buttons"
+                android:layout_below="@id/post_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:weightSum="1">
+
+                <ImageButton
+                    android:id="@+id/add_picture"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight=".5"
+                    android:layout_marginRight="5dip"
+                    android:contentDescription="@string/take_photos"
+                    android:src="@drawable/ic_action_camera"
+                    android:background="@drawable/grayish_button"/>
+
+                <Button
+                    android:id="@+id/add_from_gallery"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight=".5"
+                    android:layout_marginLeft="5dip"
+                    android:contentDescription="@string/gallery_button_description"
+                    android:background="@drawable/grayish_button"
+                    android:text="@string/gallery_button"
+                    android:textColor="#666666"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remove_photos_layout"
+                android:layout_below="@id/lower_buttons"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:gravity="center"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/remove_photos_button"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight=".8"
+                    android:contentDescription="@string/remove_photos_button"
+                    android:background="@drawable/grayish_button"
+                    android:text="@string/remove_photos_button"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <view
+                class="com.thecn.app.views.ExpandableGridView"
+                android:id="@+id/image_thumbnail_view"
+                android:layout_below="@id/remove_photos_layout"
+                android:layout_marginBottom="20dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:numColumns="auto_fit"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth" />
+
+            <LinearLayout
+                android:id="@+id/add_videos_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_thumbnail_view"
+                android:layout_marginBottom="20dp">
+
+                <EditText
+                    android:id="@+id/add_videos_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:hint="@string/video_link_hint"
+                    android:background="@drawable/selector_white_object"/>
+
+                <Button
+                    android:id="@+id/add_videos_button"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="1dp"
+                    android:contentDescription="@string/video_link_hint"
+                    android:background="@drawable/grayish_button"
+                    android:text="@string/general_add"
+                    android:textColor="#666666"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remove_videos_layout"
+                android:layout_below="@id/add_videos_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:gravity="center"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/remove_videos_button"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight=".8"
+                    android:contentDescription="@string/remove_photos_button"
+                    android:background="@drawable/grayish_button"
+                    android:text="@string/remove_videos_button"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <view
+                class="com.thecn.app.views.list.ExpandableListView"
+                android:id="@+id/video_link_view"
+                android:layout_below="@id/remove_videos_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:numColumns="auto_fit"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

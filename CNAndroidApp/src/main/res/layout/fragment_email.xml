@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_weight=".85"
+        android:layout_height="0dp"/>
+
+    <LinearLayout
+        android:id="@+id/submit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_white_object"
+        android:gravity="center"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/message_text"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:layout_weight=".75"
+            android:background="@android:color/transparent"
+            android:hint="@string/email_reply"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/submit_email"
+            android:layout_width="0dip"
+            android:layout_height="40dp"
+            android:layout_weight=".25"
+            android:padding="0dp"
+            android:text="@string/email_submit"
+            android:textColor="@android:color/white"
+            android:background="@drawable/selector_gray_button"/>
+
+    </LinearLayout>
+
+</LinearLayout>

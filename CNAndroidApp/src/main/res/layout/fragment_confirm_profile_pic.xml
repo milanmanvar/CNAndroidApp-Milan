@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:contentDescription="@string/confirm_picture"
+        android:adjustViewBounds="true"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:background="@color/nav_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fifty_dip">
+
+        <Button
+            android:id="@+id/cancel"
+            android:text="@string/cancel_label"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/gray"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/done"
+            android:text="@string/done"
+            android:textColor="@color/white"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

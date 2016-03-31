@@ -1,0 +1,7 @@
+/build
+
+#java files
+*.class
+
+## generic files to ignore
+*.apk

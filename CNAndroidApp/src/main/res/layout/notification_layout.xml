@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notification_container"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="@color/notification_bar"
+        android:weightSum="5"
+        android:gravity="right">
+
+        <RelativeLayout
+            android:id="@+id/notification_button_layout"
+            android:clickable="true"
+            android:layout_width="64dp"
+            android:layout_height="@dimen/abc_action_bar_default_height_material">
+
+            <ImageButton
+                android:id="@+id/notification_button"
+                android:clickable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_notification"
+                android:background="@null"/>
+
+            <ImageView
+                android:id="@+id/notification_arrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/up_arrow_very_light_gray"/>
+
+            <RelativeLayout
+                android:visibility="visible"
+                android:id="@+id/notification_indicator"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/red_circle"/>
+
+                <TextView
+                    android:id="@+id/notification_indicator_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="12sp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:shadowRadius="2"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowColor="@color/black"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/email_button_layout"
+            android:clickable="true"
+            android:layout_width="64dp"
+            android:layout_height="@dimen/abc_action_bar_default_height_material">
+
+            <ImageButton
+                android:id="@+id/email_button"
+                android:clickable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_email"
+                android:background="@null"/>
+
+            <ImageView
+                android:id="@+id/email_arrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/up_arrow_very_light_gray"/>
+
+            <RelativeLayout
+                android:visibility="invisible"
+                android:id="@+id/email_indicator"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/red_circle"/>
+
+                <TextView
+                    android:id="@+id/email_indicator_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="12sp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:shadowRadius="2"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowColor="@color/black"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/colleague_request_button_layout"
+            android:clickable="true"
+            android:layout_width="64dp"
+            android:layout_height="@dimen/abc_action_bar_default_height_material">
+
+            <ImageButton
+                android:id="@+id/colleague_request_button"
+                android:clickable="false"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_colleague"
+                android:background="@null"/>
+
+            <ImageView
+                android:id="@+id/colleague_arrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/up_arrow_very_light_gray"/>
+
+            <RelativeLayout
+                android:visibility="invisible"
+                android:id="@+id/request_indicator"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/red_circle"/>
+
+                <TextView
+                    android:id="@+id/request_indicator_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:textSize="12sp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:shadowRadius="2"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowColor="@color/black"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/notif_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!--<ProgressBar-->
+        <!--style="?android:attr/progressBarStyleLarge"-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:id="@+id/progressBar"-->
+        <!--android:layout_gravity="center" />-->
+
+</LinearLayout>

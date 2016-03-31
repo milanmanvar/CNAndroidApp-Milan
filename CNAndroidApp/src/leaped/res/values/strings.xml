@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LENS@LeapEd</string>
+    <string name="title_section1">Home</string>
+    <string name="title_section2">Profile</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_title">LENS</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="general_add">Add</string>
+
+    <!-- system_label -->
+    <string name="exit_label">Press again to exit......</string>
+    <string name="submit_label">Submit</string>
+    <string name="submit_label_caps">SUBMIT</string>
+    <string name="results_label">Results</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="yes_label">Yes</string>
+    <string name="no_label">No</string>
+    <string name="processing_label">Loading posts.</string>
+    <string name="process_label">Loading...</string>
+    <string name="search">Search</string>
+    <string name="searching">Searching...</string>
+    <string name="image_description">This is the description for the image</string>
+    <string name="request_time_out">Request time out!</string>
+    <string name="number_example_text">XXX,XXX,XXX</string>
+    <string name="example_text_short">text text text text</string>
+    <string name="example_text">text text text text text text text text text text text text text text </string>
+    <string name="example_text_long">text text text text text text text text text text text text text text
+    text text text text text text text text text text text text text text text text text text text text text
+    text text text text text text text text text text text text text text text text text text text text text
+    text text text text text text text text text text text text text text text text text text text text text</string>
+
+    <!-- home page label -->
+    <string name="current_filter">Current Filter: All</string>
+    <string name="filter_by">Filter By</string>
+    <string name="notification_request">Notifications</string>
+    <string name="colleague_request">Colleague Requests</string>
+    <string name="email_request">Emails</string>
+    <string name="filter_select_label">Select a Filter</string>
+    <string name="filter_done_label">Done</string>
+    <string name="reject_label">Reject</string>
+    <string name="accept_label">Accept</string>
+    <string name="notifications">Notifications</string>
+    <string name="emails">Emails</string>
+    <string name="new_followers">New Followers</string>
+    <string name="colleague_requests">Colleague Requests</string>
+    <string name="compose_email">Compose Email</string>
+    <string name="sort_posts">Filter Posts</string>
+    <string name="hide_public">Hide/Show Public Posts</string>
+
+    <!-- filter label -->
+    <string name="sort">Sort</string>
+    <string name="filter">Filter</string>
+    <string name="filter_content">Filter Content</string>
+    <string name="show_content">Show</string>
+    <string name="confirm">Confirm</string>
+
+    <!-- login label -->
+    <string name="user_hint">Email or CN Number</string>
+    <string name="password_hint">Password</string>
+    <string name="register_label">New user? Go to www.thecn.com to register!</string>
+    <string name="user_input">Please enter a valid email address or CN Number and password</string>
+
+    <!-- post label -->
+    <string name="post_button">Post</string>
+    <string name="delete_tip">Do you really want to delete this post?</string>
+    <string name="post_hint">Write Post</string>
+    <string name="create_post">Create a Post</string>
+    <string name="post_title">Post visible to</string>
+    <string name="post_visibility">Visibility Settings</string>
+    <string name="post_visibility_update">Update</string>
+    <string name="email_to">Email To</string>
+    <string name="choose_from_sd">Select a Photo from your Gallery</string>
+    <string name="take_photos">Take a Photo</string>
+    <string name="gallery_button">Gallery</string>
+    <string name="gallery_button_description">Get Photo from Gallery</string>
+    <string name="thumbnail">Photo Thumbnail</string>
+    <string name="remove_photo">Remove Photo From Post</string>
+    <string name="back_button">Go back</string>
+    <string name="remove_photos_button">Remove All Photos</string>
+    <string name="remove_videos_button">Remove All Video Links</string>
+    <string name="video_link_hint">Paste a Youtube video link</string>
+    <string name="remove_video_link_desc">Remove Youtube link</string>
+    <string name="click_here"><u>Click here</u></string>
+
+    <string name="touch_expand">Touch to expand</string>
+
+    <!-- menu label -->
+    <string name="home_label">Home    (Refresh)</string>
+    <string name="my_profile">My Profile</string>
+    <string name="logout_label">Logout</string>
+
+    <!-- email label -->
+    <string name="from_label">From</string>
+    <string name="to_label">To</string>
+    <string name="cc_label">Cc</string>
+    <string name="subject_label">Subject:</string>
+    <string name="title_activity_email">Email</string>
+
+    <!-- colleague request -->
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="ignore">Ignore</string>
+    <string name="accepted_message">You are now colleagues!</string>
+    <string name="rejected_message">Request rejected!</string>
+    <string name="colleagues">Colleagues</string>
+    <string name="pending_colleague">Pending Colleague</string>
+    <string name="colleague">Colleague</string>
+    <string name="following">Following</string>
+    <string name="follow">Follow</string>
+
+    <!-- image browse label -->
+    <string name="image_browse_title">View Image</string>
+    <string name="image_browse_all_title">Browse All Images</string>
+    <string name="image_thumbnail_description">Image Thumbnail</string>
+    <string name="image_thumbnail_remove">Remove Image</string>
+    <string name="add_photos">Submit Photos</string>
+    <string name="deselect_all_photos">Deselect All</string>
+
+    <!-- reflection label -->
+    <string name="reflection_label">Reflections</string>
+    <string name="reflection_send_label">Submit</string>
+    <string name="reflection_hint_label">Add a reflection&#8230;</string>
+    <string name="roster_label">Roster</string>
+
+    <!-- profile label -->
+    <string name="profile">Profile</string>
+    <string name="about_me_field_label">About Me</string>
+    <string name="find_me_title">Find Me</string>
+    <string name="gender_field_label">Gender</string>
+    <string name="currently_field_label">Currently</string>
+    <string name="current_work_field_label">Current Work</string>
+    <string name="primary_language_field_label">Primary Language</string>
+    <string name="country_field_label">Country</string>
+    <string name="time_zone_field_label">Time Zone</string>
+    <string name="follow_me">Follow me on these networks:</string>
+    <string name="find_me_website">Find me on these websites:</string>
+    <string name="introduction">Introduction</string>
+    <string name="base_info">Basic Information</string>
+    <string name="no_info">No information available</string>
+    <string name="followers">Followers</string>
+    <string name="cn_member">CN Member</string>
+    <string name="add_cover">Add Cover Image</string>
+    <string name="this_my_intro">This is my introduction.</string>
+    <string name="write_about_self">Write something about yourself here.</string>
+    <string name="write_tagline">Write a tagline here.</string>
+    <string name="tagline">Tagline</string>
+    <string name="edit">Edit</string>
+    <string name="limit_1500">must be between 10 and 1500 characters</string>
+    <string name="limit_65">must be between 3 and 65 characters</string>
+    <string name="gender">Gender</string>
+    <string name="pr_email">Primary Email</string>
+    <string name="pr_language">Primary Language</string>
+    <string name="choose">Choose</string>
+
+    <!-- conexus label -->
+    <string name="conexus_number_field_label">Conexus Number</string>
+
+    <!-- course label -->
+    <string name="about_label">About</string>
+    <string name="tasks_label">Tasks</string>
+    <string name="posts_label">Posts</string>
+    <string name="done">Done</string>
+    <!-- course about label -->
+    <string name="name_field_label">Name</string>
+    <string name="course_number_field_label">Course Number</string>
+    <string name="status_field_label">Status</string>
+    <string name="school_field_label">School</string>
+    <string name="instructor_field_label">Instructor</string>
+    <string name="about_field_label">About</string>
+
+    <!-- Anar Bar -->
+    <string name="anar_description">Anar Bar</string>
+    <string name="zero">0</string>
+    <string name="average">avg</string>
+
+    <!-- login label -->
+    <string name="title_activity_login">LENS @ Leapad</string>
+    <string name="login_title_text"></string>
+    <string name="username_label">USERNAME</string>
+    <string name="password_label">PASSWORD</string>
+    <string name="login_button_text">LOGIN</string>
+    <string name="create_account_underline"></string>
+    <string name="website_address"></string>
+    <string name="logo_content_description">Course Networking Logo</string>
+    <string name="title_activity_post_visibility">PostVisibilityActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+    <integer name="fragment_anim_duration">400</integer>
+    <integer name="close_drawer_duration">350</integer>
+
+    <string name="title_activity_multiple_gallery">MultiplePickGalleryActivity</string>
+    <string name="title_activity_single_gallery">SinglePickGalleryActivity</string>
+    <string name="title_activity_crop_image">CropImageActivity</string>
+    <string name="title_activity_last_screen">LastScreen</string>
+    <string name="title_activity_post_likes">PostLikesActivity</string>
+    <string name="title_activity_content_page">ContentPageActivity</string>
+    <string name="flag_description">Finish flag</string>
+    <string name="title_activity_compose_email">ComposeEmailActivity</string>
+    <string name="email_subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="send_email">Send Email</string>
+
+    <!-- Email label -->
+    <string name="email_reply">Write a reply</string>
+    <string name="email_submit">Submit</string>
+    <string name="title_activity_poll">PollActivity</string>
+    <string name="email">Email</string>
+    <string name="email_hint">someone@somewhere.com</string>
+
+    <!-- Poll label -->
+    <string name="questions_label">Questions</string>
+    <string name="view_responses">View Responses</string>
+    <string name="view_poll_button">Go to Poll</string>
+
+    <!-- Sign up -->
+    <string name="full_name">Full Name</string>
+    <string name="create_account">Create an Account</string>
+    <string name="registration_successful">Registration Successful</string>
+    <string name="email_address">Email Address</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="verification_title">Account and Password</string>
+    <string name="email_or_cn_number">Email Address or CN#</string>
+    <string name="your_password">Your Password</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="choose_profile_picture">Touch to choose a profile picture</string>
+    <string name="later">Later</string>
+
+    <string name="confirm_picture">Confirm this picture</string>
+
+    <string name="title_activity_verification">Verify</string>
+    <string name="title_activity_web_view">Web Viewer</string>
+    <string name="read_terms_use">I have read and agree to the terms of use.</string>
+    <string name="age_checkbox">I am 13 years or older.</string>
+    <string name="zip_hint">Zip code</string>
+    <string name="verify_caps">VERIFY</string>
+    <string name="cancel_caps">CANCEL</string>
+    <string name="continue_caps">CONTINUE</string>
+    <string name="terms_of_use"><u>Terms of Use</u></string>
+    <string name="enter_caps">ENTER</string>
+    <string name="current_location">What is your current location?</string>
+    <string name="usa">USA</string>
+    <string name="country">Country</string>
+    <string name="all">All</string>
+    <string name="visible_to">Visible to</string>
+    <string name="change">Change</string>
+    <string name="find_city">FIND CITY</string>
+    <string name="enter_country">Enter your country</string>
+
+    <!-- content description -->
+    <string name="cd_checkmark">Checkmark</string>
+    <string name="cd_icon">Icon</string>
+
+    <string-array name="visibility_array" >
+        <item>All CN Members</item>
+        <item>My Followers</item>
+        <item>My Colleagues</item>
+        <item>My Courses</item>
+        <item>My Conexus</item>
+        <item>Similar to my Courses</item>
+        <item>Only Me</item>
+    </string-array>
+
+    <!-- notifications -->
+    <string name="ninety_nine_plus">99+</string>
+
+    <!-- Override so that message says Google Play services are optional -->
+    <!-- (For phones) Message in confirmation dialog informing user that
+     they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] -->
+    <string name="common_google_play_services_install_text_phone" msgid="2122112764540849864">
+        Notifications will use less battery power if the latest version of Google Play services is installed, but it is missing from your phone.
+    </string>
+
+    <!-- (For tablets) Message in confirmation dialog informing user that
+        they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] -->
+    <string name="common_google_play_services_install_text_tablet" msgid="7351599665250191022">
+        Notifications will use less battery power if the latest version of Google Play services is installed, but it is missing from your tablet.
+    </string>
+
+    <!-- settings -->
+    <string name="settings">Settings</string>
+    <string name="alert_me">Alert me for</string>
+    <string name="check_notifications">Check for notifications</string>
+    <string name="notification_warning">WARNING: Checking for notifications more frequently will drain more battery life.</string>
+    <string name="general_notifications">General Notifications</string>
+    <string name="show_notifications">Show Notifications</string>
+    <string name="gp_services_cn_app">Google Play Services</string>
+    <string name="get_gp_services">Get Google Play Services</string>
+    <string name="gp_services_expl">Installing the latest version of Google Play Services will eliminate the need to periodically check for notifications, saving battery life.</string>
+    <string name="periodic_check">Periodically check for notifications</string>
+    <string name="do_not_show_notifications">Do not show notifications</string>
+    <string name="retrieval_method_notif">Notification Retrieval</string>
+    <string name="notification_settings">Notification Settings</string>
+
+    <!-- error -->
+    <string name="data_load_error">Could not load data</string>
+    <string name="retry">Retry</string>
+
+</resources>

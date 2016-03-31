@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/poll_root_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="16dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/question"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="left|start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/poll_item_margin_bottom"/>
+
+    <Button
+        android:id="@+id/done"
+        android:text="@string/submit_label_caps"
+        style="@style/standard_blue_button"
+        android:layout_marginBottom="@dimen/poll_item_margin_bottom"/>
+
+    <TextView
+        android:id="@+id/respondents_text"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_marginBottom="@dimen/clickable_text_padding"
+        android:textSize="14sp" />
+
+    <HorizontalScrollView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/post_view_pictures_height"
+        android:id="@+id/picturesScrollView"
+        android:layout_marginBottom="@dimen/poll_item_margin_bottom"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/picturesScrollViewLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/post_view_pictures_height"
+            android:layout_gravity="fill"
+            android:orientation="horizontal"
+            android:weightSum="1" >
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/attachments_text"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="@dimen/clickable_text_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/links_text"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="@dimen/clickable_text_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/results_text"
+        android:gravity="center"
+        android:text="@string/results_label"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_marginTop="16sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/correct_response_text"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"/>
+
+</LinearLayout>

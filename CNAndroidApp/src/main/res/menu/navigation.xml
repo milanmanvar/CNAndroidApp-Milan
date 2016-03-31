@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.thecn.app.activities.navigation.NavigationActivity" >
+
+    <item android:id="@+id/action_notifications"
+        android:menuCategory="container"
+        android:title="@string/notifications"
+        android:icon="@drawable/ic_action_view_as_grid"
+        app:actionProviderClass="com.thecn.app.views.NotificationActionProvider"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/action_settings"
+        android:menuCategory="secondary"
+        android:title="@string/notification_settings"
+        app:showAsAction="never" />
+
+</menu>

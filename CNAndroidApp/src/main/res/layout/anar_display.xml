@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/anar_display_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_anar"/>
+
+    <TextView
+        android:id="@+id/anar_number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/number_example_text"
+        android:paddingLeft="4dp"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:textSize="20sp"/>
+</LinearLayout>

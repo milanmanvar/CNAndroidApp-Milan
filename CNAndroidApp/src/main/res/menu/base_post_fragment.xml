@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.thecn.app.activities.navigation.NavigationActivity" >
+
+    <item android:id="@+id/action_filter"
+        android:menuCategory="secondary"
+        android:icon="@drawable/ic_action_filter"
+        android:title="@string/sort_posts"
+        app:showAsAction="ifRoom"/>
+</menu>

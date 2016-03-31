@@ -1,0 +1,65 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+        <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html -->
+    <dimen name="navigation_drawer_width">300dp</dimen>
+
+
+    <!-- menu text size 、padding、margin -->
+    <dimen name="menu_label_text_size">18sp</dimen>
+    <dimen name="menu_label_text_padding">5dip</dimen>
+    <dimen name="user_icon_width">60dip</dimen>
+    <dimen name="user_icon_height">60dip</dimen>
+    <dimen name="user_flag_width">25dip</dimen>
+    <dimen name="user_flag_height">18dp</dimen>
+    <dimen name="left_item_cell">35dip</dimen>
+    <!-- common padding/margin -->
+    <dimen name="common_padding_5">5dip</dimen>
+    <dimen name="common_padding_10">10dip</dimen>
+    <!-- profile size、padding、margin -->
+    <dimen name="profile_icon_width">70dip</dimen>
+    <dimen name="profile_icon_height">70dip</dimen>
+    <dimen name="profile_signature_size">12sp</dimen>
+    <!-- course size、padding、margin -->
+    <dimen name="course_icon_width">70dip</dimen>
+    <dimen name="course_icon_height">70dip</dimen>
+    <dimen name="shadow_width">15dip</dimen>
+    <dimen name="slidingmenu_offset">80dip</dimen>
+    <dimen name="slidingmenu_offset_2">60dip</dimen>
+
+    <dimen name="post_button_height">60dip</dimen>
+    <dimen name="post_button_shadow_height">7dip</dimen>
+
+    <dimen name="compose_email_button_height">30dip</dimen>
+
+    <dimen name="loading_popup_width">90dip</dimen>
+    <dimen name="post_view_pictures_height">150dip</dimen>
+    <dimen name="post_view_corner_radius">2dip</dimen>
+    <dimen name="common_button_corner">4dip</dimen>
+
+    <dimen name="list_divider_height">1dip</dimen>
+
+    <dimen name="poll_tab_strip_bottom_border_thickness">2dip</dimen>
+
+    <dimen name="poll_item_margin">5dip</dimen>
+    <dimen name="clickable_text_padding">4dip</dimen>
+    <dimen name="poll_item_margin_bottom">8dip</dimen>
+    <dimen name="poll_item_response_margin">4dip</dimen>
+
+    <dimen name="dialog_padding">12dip</dimen>
+    <dimen name="dialog_content_padding">4dip</dimen>
+
+    <dimen name="pie_chart_height">300dip</dimen>
+
+    <dimen name="fifty_dip">50dip</dimen>
+    <dimen name="five_dip">5dip</dimen>
+
+    <dimen name="activity_half_margin">8dip</dimen>
+
+    <!-- Filter -->
+    <dimen name="content_icon_dim">30dip</dimen>
+
+</resources>

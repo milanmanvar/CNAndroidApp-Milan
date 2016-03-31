@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/anar_bar_parent"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/anar_display"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:gravity="center">
+
+        <include layout="@layout/anar_display" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/anar_bar_lower_half"
+        android:layout_below="@id/anar_display"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/anar_req_dif"
+            android:layout_width="40dp"
+            android:layout_height="24dp"
+            android:visibility="invisible"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/anar_req_dif_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/example_text_short"
+                android:textSize="12sp"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:singleLine="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="4dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:translationX="248dp"
+            android:background="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/flag_icon"
+            android:layout_width="50dp"
+            android:layout_height="24dp"
+            android:translationX="208dp"
+            android:translationY="-2dp"
+            android:gravity="right"
+            android:background="@drawable/white_fader">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentBottom="true"
+                android:contentDescription="@string/flag_description"
+                android:src="@drawable/flag_icon"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/anar_average_layout"
+            android:layout_marginTop="-6dp"
+            android:layout_marginLeft="1.15dp"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="22dp"
+                android:text="@string/average"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/anar_average_text"
+                android:layout_width="40dp"
+                android:layout_height="18dp"
+                android:text="@string/example_text_short"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/down_arrow"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/anar_middle_layout"
+            android:gravity="bottom"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/flag_filler"
+                android:layout_width="0dp"
+                android:layout_height="12dp"/>
+
+            <View
+                android:id="@+id/avg_filler"
+                android:layout_width="0dp"
+                android:layout_height="25dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/anar_user_layout"
+            android:layout_below="@id/anar_middle_layout"
+            android:layout_width="40dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="8dp"
+                android:gravity="bottom">
+
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="bottom"
+                    android:translationX="12dp"
+                    android:contentDescription="@string/anar_description"
+                    android:background="@drawable/up_arrow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="55dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/anar_user"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/black">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/anar_user_image"
+                        android:src="@drawable/default_user_icon"
+                        android:contentDescription="@string/anar_description"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/anar_user_score"
+                    android:layout_width="40dp"
+                    android:layout_height="15dp"
+                    android:text="@string/example_text_short"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/anar_bar_layout"
+            android:layout_below="@id/anar_middle_layout"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/zero_text"
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:text="@string/zero"
+                android:gravity="center"/>
+
+
+            <RelativeLayout
+                android:id="@+id/anar_bar_entire"
+                android:layout_width="245dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_toRightOf="@id/zero_text">
+
+                <ImageView
+                    android:id="@+id/anar_bar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/anar_description"
+                    android:src="@drawable/anar_bar_transition"/>
+
+                <ImageView
+                    android:id="@+id/anar_clipper"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:transformPivotX="245dp"
+                    android:contentDescription="@string/anar_description"
+                    android:background="@color/white" />
+
+                <View
+                    android:id="@+id/finish_line"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:translationX="216dp"
+                    android:background="@color/black"/>
+
+                <View
+                    android:id="@+id/avg_or_req_line"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:background="@color/black"/>
+
+                <com.thecn.app.views.BarMask
+                    android:id="@+id/anar_border"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/anar_description"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_toRightOf="@id/anar_bar_entire"
+                android:layout_width="45dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="2dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/anar_top_user"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@color/black">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:id="@+id/anar_top_user_image"
+                        android:src="@drawable/default_user_icon"
+                        android:contentDescription="@string/anar_description"
+                        android:layout_centerInParent="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/anar_top_user_score"
+                    android:layout_width="45dp"
+                    android:layout_height="15dp"
+                    android:text="@string/example_text_short"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

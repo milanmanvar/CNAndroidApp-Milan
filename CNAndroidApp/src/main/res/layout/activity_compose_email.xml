@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_color">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="7dip"
+        android:paddingRight="7dip"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.thecn.app.views.CNEmailRecipientEditTextView
+                android:id="@+id/email_recipients"
+                android:hint="@string/to_label"
+                android:inputType="textEmailAddress|textMultiLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <com.thecn.app.views.CNEmailRecipientEditTextView
+                android:id="@+id/email_cc_recipients"
+                android:hint="@string/cc_label"
+                android:inputType="textEmailAddress|textMultiLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/subject"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_subject"
+                android:gravity="top"/>
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/message"
+                android:gravity="top"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
