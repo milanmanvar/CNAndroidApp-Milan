@@ -1095,8 +1095,10 @@ public class ProfileHeaderController {
             String error = StoreUtil.getFirstResponseError(response);
             if (error == null) error = DEFAULT_ERROR_MSG;
             moreView.setVisibility(View.GONE);
-            errorView.setText(error);
-            errorView.setVisibility(View.VISIBLE);
+            if(errorView!=null) {
+                errorView.setText(error);
+                errorView.setVisibility(View.VISIBLE);
+            }
             sectionView.setOnClickListener(null);
         }
     }
