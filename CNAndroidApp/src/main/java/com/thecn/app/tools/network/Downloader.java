@@ -24,7 +24,7 @@ import org.json.JSONObject;
 public class Downloader {
 
     /**
-     * Uses an attachment to download a file from the CN website.
+     * Uses an attachment to download a file from   the CN website.
      * @param attachment attachment to download
      * @param title title of download manager notification
      * @param context used to get download manager
@@ -36,10 +36,10 @@ public class Downloader {
             return;
         }
 
-        if (!ServiceChecker.isDownloadManagerAvailable(context)) {
+       /* if (!ServiceChecker.isDownloadManagerAvailable(context)) {
             AppSession.showLongToast("Cannot access download manager");
             return;
-        }
+        }*/
 
         AppSession.showLongToast("Downloading...");
 
@@ -86,6 +86,7 @@ public class Downloader {
 
         //set up request
         DownloadManager.Request request = new DownloadManager.Request(uri);
+
         request.setTitle(title);
         request.setDescription(attachment.getNameWithExtension());
 

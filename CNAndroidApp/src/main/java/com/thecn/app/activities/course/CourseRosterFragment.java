@@ -75,7 +75,7 @@ public class CourseRosterFragment extends SwipeRefreshListFragment implements Sw
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
 
-        limit = 30;
+        limit = 10;
         offset = 0;
         loading = false;
         noMore = false;

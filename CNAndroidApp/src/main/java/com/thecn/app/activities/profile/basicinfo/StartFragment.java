@@ -261,6 +261,7 @@ public class StartFragment extends Fragment implements FragmentAnimationInterfac
             synchronized (as.userLock) {
                 localUser.setUserProfile(updatedUser.getUserProfile());
                 localUser.setCountry(updatedUser.getCountry());
+                localUser.setVisibilitySettings(updatedUser.getVisibilitySettings());
             }
 
             //send broadcast to update views.
