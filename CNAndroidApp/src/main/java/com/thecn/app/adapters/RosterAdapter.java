@@ -120,6 +120,12 @@ public class RosterAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
+        if(CourseActivity_New.hiddenScore) {
+            holder.txtAnarCount.setVisibility(View.GONE);
+        }
+        else {
+            holder.txtAnarCount.setVisibility(View.VISIBLE);
+        }
 
         try {
             String avatarUrl = user.getAvatar().getView_url() + ".w160.jpg";
@@ -132,12 +138,17 @@ public class RosterAdapter extends BaseAdapter {
         try {
 
             holder.userName.setText(user.getDisplayName());
-            holder.txtAnarCount.setText(String.valueOf(user.getScore().getSubtotal()));
 
-            if(CourseActivity_New.hiddenScore)
-                holder.txtAnarCount.setVisibility(View.GONE);
-            else
-                holder.txtAnarCount.setVisibility(View.VISIBLE);
+
+
+            if(user.getScore()!=null) {
+                holder.txtAnarCount.setText(String.valueOf(user.getScore().getSubtotal()));
+            }
+            else {
+                holder.txtAnarCount.setText("");
+            }
+
+
 
 
         } catch (Exception e) {
