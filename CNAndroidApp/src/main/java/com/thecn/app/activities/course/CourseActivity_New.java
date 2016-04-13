@@ -34,6 +34,7 @@ public class CourseActivity_New extends ContentPageActivity_New {
     private String courseID;
     private DataGrabber mDataGrabber;
     public static boolean hiddenElement = false;
+    public static boolean hiddenScore = false;
 
 
     /**
@@ -327,6 +328,7 @@ public class CourseActivity_New extends ContentPageActivity_New {
                     if(jsHiddenElement != null){
                         hiddenElement = jsHiddenElement.optBoolean("course_sidebar_control_gradebook");
                     }
+                    hiddenScore = jsData.optBoolean("hide_score");
 
 
                 } catch (JSONException e) {

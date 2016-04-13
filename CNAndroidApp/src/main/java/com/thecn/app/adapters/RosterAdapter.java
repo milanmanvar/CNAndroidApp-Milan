@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.thecn.app.R;
+import com.thecn.app.activities.course.CourseActivity_New;
 import com.thecn.app.models.user.User;
 import com.thecn.app.tools.volley.MyVolley;
 
@@ -132,6 +133,13 @@ public class RosterAdapter extends BaseAdapter {
 
             holder.userName.setText(user.getDisplayName());
             holder.txtAnarCount.setText(String.valueOf(user.getScore().getSubtotal()));
+
+            if(CourseActivity_New.hiddenScore)
+                holder.txtAnarCount.setVisibility(View.GONE);
+            else
+                holder.txtAnarCount.setVisibility(View.VISIBLE);
+
+
         } catch (Exception e) {
             //whoops
             e.printStackTrace();

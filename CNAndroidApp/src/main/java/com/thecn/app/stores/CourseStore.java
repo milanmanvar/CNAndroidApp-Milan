@@ -294,7 +294,7 @@ public class CourseStore extends BaseStore {
      */
     public static void getCourseRoster(Course course, int limit, int offset, final ResponseCallback callback) {
         String query = "/course_user/?course_id=" + course.getId() + "&limit=" + limit + "&offset=" + offset
-                + "&with_user_country=1&with_user_profile=1&with_user_score=0&with_course_user_model=1" +
+                + "&with_user_country=1&with_user_profile=0&with_user_score=0&with_course_user_model=1" +
                 "&with_course_user_count=1&with_course_user_score=1";
 
         ///course_user/?course_id=%@&with_user_country=1&with_user_profile=0&with_user_score=0&with_course_user_model=1&with_course_user_count=1&with_course_user_score=1&limit=%i&offset=%i", courseId, limit, offset];

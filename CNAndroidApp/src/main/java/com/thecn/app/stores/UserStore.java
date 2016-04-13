@@ -75,8 +75,12 @@ public class UserStore extends BaseStore {
             for (int i = 0; i < jsonArray.length(); i++) {
                 try {
                     User user = fromJSON(jsonArray.getJSONObject(i).getJSONObject("model"));
-                    Score score = fromJSONScore(jsonArray.getJSONObject(i).getJSONObject("score"));
-                    user.setScore(score);
+                    if (jsonArray.getJSONObject(i).optJSONObject("score")!=null) {
+                        Score score = fromJSONScore(jsonArray.getJSONObject(i).getJSONObject("score"));
+                        user.setScore(score);
+                    }else{
+
+                    }
                     if (user != null) {
                         users.add(user);
                     } else {
