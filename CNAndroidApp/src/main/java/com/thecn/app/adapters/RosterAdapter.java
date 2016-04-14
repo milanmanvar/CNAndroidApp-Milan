@@ -13,6 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.thecn.app.AppSession;
 import com.thecn.app.R;
 import com.thecn.app.activities.course.CourseActivity_New;
 import com.thecn.app.models.user.User;
@@ -120,10 +121,18 @@ public class RosterAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        if(CourseActivity_New.hiddenScore) {
-            holder.txtAnarCount.setVisibility(View.GONE);
-        }
-        else {
+        if (CourseActivity_New.hiddenScore) {
+
+            final AppSession session = AppSession.getInstance();
+            User loggedInUser = session.getUser();
+
+            if (loggedInUser.getId().equals(user.getId())) {
+                holder.txtAnarCount.setVisibility(View.VISIBLE);
+            } else {
+
+                holder.txtAnarCount.setVisibility(View.GONE);
+            }
+        } else {
             holder.txtAnarCount.setVisibility(View.VISIBLE);
         }
 
@@ -140,15 +149,11 @@ public class RosterAdapter extends BaseAdapter {
             holder.userName.setText(user.getDisplayName());
 
 
-
-            if(user.getScore()!=null) {
+            if (user.getScore() != null) {
                 holder.txtAnarCount.setText(String.valueOf(user.getScore().getSubtotal()));
-            }
-            else {
+            } else {
                 holder.txtAnarCount.setText("");
             }
-
-
 
 
         } catch (Exception e) {
