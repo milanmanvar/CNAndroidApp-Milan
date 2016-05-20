@@ -165,12 +165,14 @@
                 android:padding="10dp">
 
                 <ImageView
+                    android:id="@+id/ivGraph"
                     android:src="@drawable/ic_pie_chart_white"
                     android:layout_marginRight="4dp"
                     android:layout_width="15dp"
                     android:layout_height="15dp" />
 
                 <TextView
+                    android:id="@+id/txtGotoPoll"
                     android:text="@string/view_poll_button"
                     android:textColor="@color/white"
                     android:textStyle="bold"
@@ -247,6 +249,7 @@
                 android:gravity="center"
                 android:minWidth="70dp"
                 android:clickable="true"
+                android:visibility="gone"
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 android:layout_marginRight="4dp"

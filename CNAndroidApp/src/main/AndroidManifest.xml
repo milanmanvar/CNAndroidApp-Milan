@@ -77,6 +77,7 @@
             android:name=".activities.post.PostActivity"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".activities.course.CourseActivity" />
+        <activity android:name=".activities.course.FullScreenWebDetail" />
         <activity android:name=".activities.course.TaskFullScreen1" />
         <activity android:name=".activities.course.TaskLinkDetail" />
         <activity

@@ -37,6 +37,7 @@ import com.thecn.app.activities.SettingsActivity;
 import com.thecn.app.activities.composeemail.ComposeEmailActivity;
 import com.thecn.app.activities.conexus.ConexusActivity;
 import com.thecn.app.activities.course.CourseActivity_New;
+import com.thecn.app.activities.course.FullScreenWebDetail;
 import com.thecn.app.activities.createpost.CreatePostActivity;
 import com.thecn.app.activities.email.EmailActivity;
 import com.thecn.app.activities.homefeed.HomeFeedActivity;
@@ -87,7 +88,7 @@ public abstract class NavigationActivity extends ActionBarActivity implements Na
 
     private String activityTitle = "";
 
-    private SlidingMenu slidingMenu;
+    public SlidingMenu slidingMenu;
 
     //for notification fragments
     private ViewPager mViewPager;
@@ -804,6 +805,15 @@ public abstract class NavigationActivity extends ActionBarActivity implements Na
         }
         openPage(intent);
     }
+
+    public void openClassCastPage(Post post){
+
+        final Intent intent = new Intent(this, FullScreenWebDetail.class);
+        intent.putExtra("post", post);
+        openPage(intent);
+
+    }
+
 
     /**
      * Opens {@link com.thecn.app.activities.course.CourseActivity}

@@ -16,6 +16,7 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import com.android.volley.VolleyError;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.thecn.app.AppSession;
 import com.thecn.app.R;
 import com.thecn.app.activities.createpost.CreatePostActivity;
@@ -52,6 +53,8 @@ public class TaskFullScreen1 extends NavigationActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_full);
+        slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
+
         txtContent = (WebView) findViewById(R.id.task_content);
         callbackManager = new CallbackManager<>();
         txtContent.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
@@ -601,4 +604,12 @@ public class TaskFullScreen1 extends NavigationActivity {
         }
     }
 
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        slidingMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+
+    }
 }

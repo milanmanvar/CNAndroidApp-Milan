@@ -31,10 +31,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.VolleyError;
 import com.thecn.app.AppSession;
 import com.thecn.app.R;
+import com.thecn.app.activities.course.FullScreenWebDetail;
 import com.thecn.app.activities.navigation.NavigationActivity;
 import com.thecn.app.activities.poll.PollActivity;
 import com.thecn.app.adapters.AttachmentAdapter;
@@ -623,6 +625,7 @@ public class PostViewController {
     private void adaptViewForPost() {
 
         Post.Type type = mPost.getEnumType();
+
         postContentTextView.setMovementMethod(LinkMovementMethod.getInstance());
 
         if (type == Post.Type.POLL) {
@@ -643,8 +646,9 @@ public class PostViewController {
                 listener = new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        PollActivity activity = (PollActivity) getActivity();
-                        activity.setViewPagerIndex(1);
+                        //PollActivity activity = (PollActivity) getActivity();
+                        //activity.setViewPagerIndex(1);
+                        Toast.makeText(getActivity(),mPost.getId(),Toast.LENGTH_LONG).show();
                     }
                 };
             } else {
@@ -652,7 +656,36 @@ public class PostViewController {
             }
 
             pollButton.setOnClickListener(listener);
-        } else {
+
+        }else if(type == Post.Type.CLASSCAST){
+
+            pollButton.setVisibility(View.VISIBLE);
+            TextView tvButton = (TextView) pollButton.findViewById(R.id.txtGotoPoll);
+            ImageView ivGraph = (ImageView) pollButton.findViewById(R.id.ivGraph);
+            ivGraph.setVisibility(View.GONE);
+            tvButton.setText("Enter ClassCast");
+
+            View.OnClickListener listener = new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //PollActivity activity = (PollActivity) getActivity();
+                    //activity.setViewPagerIndex(1);
+                    //Toast.makeText(getActivity(),mPost.getId(),Toast.LENGTH_LONG).show();
+
+                    //getNavigationActivity().openClassCastPage(mPost);
+
+                    final Intent intent = new Intent(getActivity(), FullScreenWebDetail.class);
+                    intent.putExtra("post", mPost);
+                    getActivity().startActivity(intent);
+
+                }
+            };
+
+
+            pollButton.setOnClickListener(listener);
+
+        }
+        else {
             //this is not a poll
             pollButton.setVisibility(View.GONE);
         }
