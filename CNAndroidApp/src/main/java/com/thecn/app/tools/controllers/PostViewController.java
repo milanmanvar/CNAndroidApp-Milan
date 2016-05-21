@@ -638,7 +638,10 @@ public class PostViewController {
                 listener = new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        getNavigationActivity().openPollPage(mPost, 1);
+                        //getNavigationActivity().openPollPage(mPost, 1);
+                        final Intent intent = new Intent(getActivity(), FullScreenWebDetail.class);
+                        intent.putExtra("post", mPost);
+                        getActivity().startActivity(intent);
                     }
                 };
             } else if (getActivity() instanceof PollActivity) {
@@ -648,7 +651,10 @@ public class PostViewController {
                     public void onClick(View view) {
                         //PollActivity activity = (PollActivity) getActivity();
                         //activity.setViewPagerIndex(1);
-                        Toast.makeText(getActivity(),mPost.getId(),Toast.LENGTH_LONG).show();
+
+                        final Intent intent = new Intent(getActivity(), FullScreenWebDetail.class);
+                        intent.putExtra("post", mPost);
+                        getActivity().startActivity(intent);
                     }
                 };
             } else {

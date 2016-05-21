@@ -254,6 +254,8 @@ public class GlobalGson {
                 notification.setMark(mark);
 
                 String type = getString(jObject.get("type"));
+                if(type.equalsIgnoreCase("like_content"))
+                    return null;
                 notification.setType(type);
 
                 ArrayList<Course> courses = new ArrayList<Course>();

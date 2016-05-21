@@ -72,7 +72,7 @@ public class FullScreenWebDetail extends NavigationActivity{
         txtContent.loadUrl(url);
 
 
-        //setActionBarAndTitle("Task");
+        setActionBarAndTitle("Post");
 
 
     }
