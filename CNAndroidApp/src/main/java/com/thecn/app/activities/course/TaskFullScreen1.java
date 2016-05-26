@@ -204,7 +204,26 @@ public class TaskFullScreen1 extends NavigationActivity {
 
                             }
                         });
-                    } else {
+                    }else if (url.contains("data-taskactionlink-type=view_classcast")) {
+                        PostStore.getPostById(dataId, new ResponseCallback() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                Post post = PostStore.getData(response);
+
+                                if (post != null) {
+                                    ((NavigationActivity) TaskFullScreen1.this).openPostPage(post, false);
+                                }
+                            }
+
+                            @Override
+                            public void onError(VolleyError error) {
+
+                            }
+                        });
+                    }
+
+
+                    else {
                         Toast.makeText(TaskFullScreen1.this, "This type of SmartLink is not currently supported", Toast.LENGTH_LONG).show();
                     }
 

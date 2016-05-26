@@ -690,6 +690,33 @@ public class PostViewController {
 
             pollButton.setOnClickListener(listener);
 
+        }else if(type == Post.Type.QUIZ){
+
+            pollButton.setVisibility(View.VISIBLE);
+            TextView tvButton = (TextView) pollButton.findViewById(R.id.txtGotoPoll);
+            ImageView ivGraph = (ImageView) pollButton.findViewById(R.id.ivGraph);
+            ivGraph.setVisibility(View.GONE);
+            tvButton.setText("Preview Quiz");
+
+            View.OnClickListener listener = new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //PollActivity activity = (PollActivity) getActivity();
+                    //activity.setViewPagerIndex(1);
+                    //Toast.makeText(getActivity(),mPost.getId(),Toast.LENGTH_LONG).show();
+
+                    //getNavigationActivity().openClassCastPage(mPost);
+
+                    final Intent intent = new Intent(getActivity(), FullScreenWebDetail.class);
+                    intent.putExtra("post", mPost);
+                    getActivity().startActivity(intent);
+
+                }
+            };
+
+
+            pollButton.setOnClickListener(listener);
+
         }
         else {
             //this is not a poll
