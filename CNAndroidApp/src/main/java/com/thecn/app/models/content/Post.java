@@ -693,8 +693,10 @@ public class Post implements Serializable {
 
         CharSequence formattedContent = formatContent(content);
 
-        return TextUtils.concat(formattedContent, "\n\n",
-                "For now, please use a desktop computer to access this Quiz.");
+//        return TextUtils.concat(formattedContent, "\n\n",
+//                "For now, please use a desktop computer to access this Quiz.");
+
+        return  formattedContent;
     }
 
     /**
@@ -712,8 +714,9 @@ public class Post implements Serializable {
         content += "<br><b>Status:</b> " + getClassCastStatus();
 
         CharSequence formattedContent = formatContent(content);
-        return TextUtils.concat(formattedContent, "\n\n",
-                "Please use a desktop computer to access this ClassCast.");
+//        return TextUtils.concat(formattedContent, "\n\n",
+//                "Please use a desktop computer to access this ClassCast.");
+        return  formattedContent;
     }
 
     /**

@@ -1030,16 +1030,16 @@ public class PostViewController {
         if (post.isDeletable()) {
             //show delete option
             if (isFullView) {
-                options = new String[]{"Show Likes", "Delete Post"};
+                options = new String[]{"Delete Post"};
             } else {
-                options = new String[]{"Show Likes", "Show Reflections", "Delete Post"};
+                options = new String[]{"Show Reflections", "Delete Post"};
             }
         } else {
             //show delete option
             if (isFullView) {
-                options = new String[]{"Show Likes"};
+                options = new String[]{};
             } else {
-                options = new String[]{"Show Likes", "Show Reflections"};
+                options = new String[]{"Show Reflections"};
             }
         }
         builder.setTitle(null)
@@ -1049,16 +1049,16 @@ public class PostViewController {
                      */
                     public void onClick(DialogInterface dialog, int which) {
                         switch (which) {
+//                            case 0:
+//                                getNavigationActivity().openPostLikesActivity(post);
+//                                break;
                             case 0:
-                                getNavigationActivity().openPostLikesActivity(post);
-                                break;
-                            case 1:
                                 if (isFullView && post.isDeletable())
                                     deletePost(post);
                                 else
                                     getNavigationActivity().openPostPage(post, false);
                                 break;
-                            case 2:
+                            case 1:
                                 deletePost(post);
                                 break;
                             default:
@@ -1067,6 +1067,7 @@ public class PostViewController {
                     }
                 });
         AlertDialog alertDialog = builder.create();
+        if(options.length>0)
         alertDialog.show();
     }
 

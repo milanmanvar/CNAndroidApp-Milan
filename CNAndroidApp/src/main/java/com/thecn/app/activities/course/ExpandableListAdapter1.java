@@ -236,7 +236,26 @@ public class ExpandableListAdapter1 extends BaseExpandableListAdapter {
 
                         }
                     });
-                } else {
+                }else if (url.contains("data-taskactionlink-type=view_classcast")) {
+                    PostStore.getPostById(dataId, new ResponseCallback() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            Post post = PostStore.getData(response);
+
+                            if (post != null) {
+                                ((NavigationActivity) _context).openPostPage(post, false);
+                            }
+                        }
+
+                        @Override
+                        public void onError(VolleyError error) {
+
+                        }
+                    });
+                }
+
+
+                else {
                     Toast.makeText(_context, "This type of SmartLink is not currently supported", Toast.LENGTH_LONG).show();
                 }
 

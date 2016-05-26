@@ -10,9 +10,11 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.thecn.app.AppSession;
 import com.thecn.app.R;
 import com.thecn.app.activities.navigation.NavigationActivity;
 import com.thecn.app.models.content.Post;
+import com.thecn.app.stores.AuthStore;
 import com.thecn.app.tools.CallbackManager;
 
 /**
@@ -67,7 +69,8 @@ public class FullScreenWebDetail extends NavigationActivity{
 
 
         mPost = (Post) getIntent().getSerializableExtra("post");
-        String url = "https://www.thecn.com/mini/content/view/"+mPost.getId();
+//        String url = "https://www.thecn.com/mini/content/view/"+mPost.getId();
+        String url = "https://www.thecn.com/site/token/"+ AppSession.getInstance().getToken()+"/redirect_to/mini%2Fcontent%2Fview%2F"+mPost.getId();
         //String url = "https://www.google.com/";
         txtContent.loadUrl(url);
 
