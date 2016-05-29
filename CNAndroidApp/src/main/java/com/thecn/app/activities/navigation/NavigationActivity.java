@@ -731,7 +731,13 @@ public abstract class NavigationActivity extends ActionBarActivity implements Na
     public void openPostPage(Post post, boolean textFocus) {
         if (isPostActivityOpen(post)) return;
 
-        openPage(getPostIntent(post, textFocus));
+        openPage(getPostIntent(post,null, textFocus));
+    }
+
+    public void openPostPage(Post post,String id, boolean textFocus) {
+        if (isPostActivityOpen(post)) return;
+
+        openPage(getPostIntent(post,id, textFocus));
     }
 
     /**
@@ -774,7 +780,7 @@ public abstract class NavigationActivity extends ActionBarActivity implements Na
      * @param textFocus whether to open the soft keyboard to make a reflection
      * @return the Intent that will open the appropriate activity.
      */
-    public Intent getPostIntent(Post post, boolean textFocus) {
+    public Intent getPostIntent(Post post,String id, boolean textFocus) {
         Intent intent;
 
         Post.Type type = post.getEnumType();
@@ -787,6 +793,8 @@ public abstract class NavigationActivity extends ActionBarActivity implements Na
         }
 
         intent.putExtra("post", post);
+        if(id!=null)
+            intent.putExtra("taskID", id);
         intent.putExtra("textFocus", textFocus);
         return intent;
     }

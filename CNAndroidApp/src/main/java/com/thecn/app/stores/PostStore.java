@@ -42,6 +42,9 @@ public class PostStore extends BaseStore {
     public static final String EVENT = "event";
     public static final String CLASSCAST = "classcast";
 
+
+    public static  String taskId = "";
+
     private static final String COMMON_POST_PARAM = "with_content_count=1&with_content_user=1&with_content_original_content=1&" +
             "with_content_attachments=1&with_content_pictures=1&with_content_links=1&with_content_videos=1&" +
             "with_user_country=1&with_content_courses=1&with_content_conexuses=1";
@@ -268,7 +271,23 @@ public class PostStore extends BaseStore {
      */
     public static void getPostById(String postId, final ResponseCallback callback) {
 
+        PostStore.taskId = "";
         String query = "/content/" + postId + "?" + COMMON_POST_PARAM;
+
+        api(query, Request.Method.GET, callback);
+    }
+
+    public static void getPostById(String postId,String taskId, final ResponseCallback callback) {
+
+        String query;
+        if(taskId!=null && taskId.length()>0) {
+
+            PostStore.taskId = taskId;
+            query = "/content/" + postId + "?task_id=" + taskId + "&" + COMMON_POST_PARAM;
+        }else {
+            query = "/content/" + postId + "?" + COMMON_POST_PARAM;
+            PostStore.taskId = "";
+        }
 
         api(query, Request.Method.GET, callback);
     }

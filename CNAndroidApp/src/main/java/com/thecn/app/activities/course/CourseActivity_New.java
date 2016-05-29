@@ -11,6 +11,7 @@ import com.thecn.app.activities.ContentPageActivity_New;
 import com.thecn.app.activities.createpost.CreatePostActivity;
 import com.thecn.app.models.course.Course;
 import com.thecn.app.stores.CourseStore;
+import com.thecn.app.stores.PostStore;
 import com.thecn.app.stores.StoreUtil;
 import com.thecn.app.tools.CallbackManager;
 
@@ -48,6 +49,7 @@ public class CourseActivity_New extends ContentPageActivity_New {
             String courseNumber;
 
             try {
+                PostStore.taskId = "";
                 mCourse = (Course) getIntent().getSerializableExtra("course");
                 courseID = mCourse.getId();
                 courseNumber = mCourse.getCourseNumber();
@@ -354,5 +356,11 @@ public class CourseActivity_New extends ContentPageActivity_New {
 
 
         }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        PostStore.taskId = "";
     }
 }

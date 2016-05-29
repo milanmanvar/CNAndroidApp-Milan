@@ -45,7 +45,7 @@ import java.util.regex.Pattern;
  */
 public class TaskFullScreen1 extends NavigationActivity {
     WebView txtContent;
-    private String id;
+    public  String id;
     private TaskLinkPatterns tlps;
     private CallbackManager<TaskFullScreen> callbackManager;
 
@@ -157,23 +157,24 @@ public class TaskFullScreen1 extends NavigationActivity {
                         Intent iView = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                         startActivity(iView);
                     } else if (url.contains("data-taskactionlink-type=view_survey")) {
-                        PostStore.getPostById(dataId, new ResponseCallback() {
+                        PostStore.getPostById(dataId,id, new ResponseCallback() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Post post = PostStore.getData(response);
 
                                 if (post != null) {
-                                    ((NavigationActivity) TaskFullScreen1.this).openPostPage(post, false);
+                                    ((NavigationActivity) TaskFullScreen1.this).openPostPage(post,id, false);
                                 }
                             }
 
                             @Override
                             public void onError(VolleyError error) {
 
+                                Log.e("error",error.getMessage());
                             }
                         });
                     } else if (url.contains("data-taskactionlink-type=view_event")) {
-                        PostStore.getPostById(dataId, new ResponseCallback() {
+                        PostStore.getPostById(dataId,id, new ResponseCallback() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Post post = PostStore.getData(response);
@@ -189,7 +190,7 @@ public class TaskFullScreen1 extends NavigationActivity {
                             }
                         });
                     } else if (url.contains("data-taskactionlink-type=view_quiz")) {
-                        PostStore.getPostById(dataId, new ResponseCallback() {
+                        PostStore.getPostById(dataId,id, new ResponseCallback() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Post post = PostStore.getData(response);
@@ -205,7 +206,7 @@ public class TaskFullScreen1 extends NavigationActivity {
                             }
                         });
                     }else if (url.contains("data-taskactionlink-type=view_classcast")) {
-                        PostStore.getPostById(dataId, new ResponseCallback() {
+                        PostStore.getPostById(dataId,id, new ResponseCallback() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Post post = PostStore.getData(response);

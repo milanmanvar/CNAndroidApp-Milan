@@ -189,7 +189,7 @@ public class ExpandableListAdapter1 extends BaseExpandableListAdapter {
                     Intent iView = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     _context.startActivity(iView);
                 } else if (url.contains("data-taskactionlink-type=view_survey")) {
-                    PostStore.getPostById(dataId, new ResponseCallback() {
+                    PostStore.getPostById(dataId,id, new ResponseCallback() {
                         @Override
                         public void onResponse(JSONObject response) {
                             Post post = PostStore.getData(response);
@@ -205,7 +205,7 @@ public class ExpandableListAdapter1 extends BaseExpandableListAdapter {
                         }
                     });
                 } else if (url.contains("data-taskactionlink-type=view_event")) {
-                    PostStore.getPostById(dataId, new ResponseCallback() {
+                    PostStore.getPostById(dataId,id, new ResponseCallback() {
                         @Override
                         public void onResponse(JSONObject response) {
                             Post post = PostStore.getData(response);
@@ -221,7 +221,7 @@ public class ExpandableListAdapter1 extends BaseExpandableListAdapter {
                         }
                     });
                 }else if (url.contains("data-taskactionlink-type=view_quiz")) {
-                    PostStore.getPostById(dataId, new ResponseCallback() {
+                    PostStore.getPostById(dataId,id, new ResponseCallback() {
                         @Override
                         public void onResponse(JSONObject response) {
                             Post post = PostStore.getData(response);
@@ -237,7 +237,7 @@ public class ExpandableListAdapter1 extends BaseExpandableListAdapter {
                         }
                     });
                 }else if (url.contains("data-taskactionlink-type=view_classcast")) {
-                    PostStore.getPostById(dataId, new ResponseCallback() {
+                    PostStore.getPostById(dataId,id, new ResponseCallback() {
                         @Override
                         public void onResponse(JSONObject response) {
                             Post post = PostStore.getData(response);

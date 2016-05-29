@@ -98,7 +98,7 @@ public class PostActivity extends NavigationActivity {
 
             loading = true;
             String id = getArguments().getString(ID_KEY);
-            PostStore.getPostById(id, new Callback(manager));
+            PostStore.getPostById(id,PostStore.taskId, new Callback(manager));
         }
 
         @Override
