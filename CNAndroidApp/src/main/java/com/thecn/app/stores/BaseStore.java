@@ -304,6 +304,7 @@ public class BaseStore {
         }
 
         String string = "CNAndroidApp/";
+        //String string = "LENSAndroidApp/";
 
         string += versionName + " ";
         string += "(Android; " + Build.MANUFACTURER + "; " + Build.MODEL + "; ";

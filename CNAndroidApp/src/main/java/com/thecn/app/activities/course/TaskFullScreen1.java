@@ -134,7 +134,7 @@ public class TaskFullScreen1 extends NavigationActivity {
                         });
 
                     } else if (url.contains("data-taskactionlink-type=view_post")) {
-                        PostStore.getPostById(dataId, new ResponseCallback() {
+                        PostStore.getPostById(dataId,id, new ResponseCallback() {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Post post = PostStore.getData(response);
