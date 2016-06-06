@@ -289,7 +289,7 @@ public class PollActivity extends NavigationActivity {
 
         @Override
         public int getCount() {
-            return mPost.getItems().size() + 1;
+            return mPost.getItems().size() ;
         }
 
         @Override

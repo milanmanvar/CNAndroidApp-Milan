@@ -15,6 +15,7 @@ import com.thecn.app.R;
 import com.thecn.app.activities.navigation.NavigationActivity;
 import com.thecn.app.models.content.Post;
 import com.thecn.app.stores.AuthStore;
+import com.thecn.app.stores.BaseStore;
 import com.thecn.app.stores.PostStore;
 import com.thecn.app.tools.CallbackManager;
 
@@ -73,9 +74,9 @@ public class FullScreenWebDetail extends NavigationActivity{
 //        String url = "https://www.thecn.com/mini/content/view/"+mPost.getId();
         String url;
         if(PostStore.taskId!=null && PostStore.taskId.length()>0)
-             url = "https://www.thecn.com/site/token/"+ AppSession.getInstance().getToken()+"/redirect_to/mini%2Fcontent%2Fview%2F"+mPost.getId()+"?task_id="+PostStore.taskId;
+             url = BaseStore.SITE_URL+"/site/token/"+ AppSession.getInstance().getToken()+"/redirect_to/mini%2Fcontent%2Fview%2F"+mPost.getId()+"?task_id="+PostStore.taskId;
         else
-         url = "https://www.thecn.com/site/token/"+ AppSession.getInstance().getToken()+"/redirect_to/mini%2Fcontent%2Fview%2F"+mPost.getId();
+         url = BaseStore.SITE_URL+"/site/token/"+ AppSession.getInstance().getToken()+"/redirect_to/mini%2Fcontent%2Fview%2F"+mPost.getId();
         //String url = "https://www.google.com/";
         txtContent.loadUrl(url);
 

@@ -725,7 +725,10 @@ public class PostViewController {
 
         showTitleIfExists();
 
-        postContentTextView.setText(mPost.getContentText());
+        if(mPost.getContentText()!=null && !mPost.getContentText().toString().equalsIgnoreCase("null"))
+            postContentTextView.setText(mPost.getContentText());
+        else
+            postContentTextView.setText("");
     }
 
     /**

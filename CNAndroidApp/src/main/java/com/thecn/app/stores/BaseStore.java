@@ -36,7 +36,7 @@ public class BaseStore {
 
     //testing site
     //public static final String SITE_URL = "http://v4.coursenetworking.com";
-   // public static final String SITE_URL = "https://v4.thecn.com";
+    //public static final String SITE_URL = "https://v4.thecn.com";
     public static final String SITE_URL = "https://www.thecn.com";
 
     public static final String BASE_URL = SITE_URL + "/api";
