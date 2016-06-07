@@ -111,6 +111,7 @@ public class PostStore extends BaseStore {
         try {
             return gson.fromJson(json.toString(), Post.class);
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
