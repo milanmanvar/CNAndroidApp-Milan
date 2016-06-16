@@ -108,7 +108,9 @@ public class PostStore extends BaseStore {
     public static Post fromJSON(JSONObject json) {
 
         Gson gson = GlobalGson.getGson();
+       // Gson gson = new Gson();
         try {
+           // boolean test = json.isNull(json.toString());
             return gson.fromJson(json.toString(), Post.class);
         } catch (Exception e) {
             e.printStackTrace();

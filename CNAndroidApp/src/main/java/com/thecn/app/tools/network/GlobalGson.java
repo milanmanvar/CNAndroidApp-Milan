@@ -79,12 +79,12 @@ public class GlobalGson {
                 ArrayList<String> answers = new ArrayList<String>();
                 JsonArray answersJson = holder.getAsJsonArray();
 
-                for (JsonElement e : answersJson) {
-                    String answer = getString(e);
-                    answers.add(answer);
-                }
-
-                submission.setAnswers(answers);
+//                for (JsonElement e : answersJson) {
+//                    String answer = getString(e);
+//                    answers.add(answer);
+//                }
+//
+//                submission.setAnswers(answers);
             }
 
             holder = submissionJson.get("user");

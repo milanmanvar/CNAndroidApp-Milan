@@ -635,10 +635,10 @@ public class Post implements Serializable {
         if (items != null && items.size() > 0) {
 
             for (int i = 0; i < items.size() - 1; i++) {
-                content += items.get(i).getDisplayText() + "<br>";
+                content += items.get(i).getText() + "<br>";
             }
 
-            content += items.get(items.size() - 1).getDisplayText();
+            content += items.get(items.size() - 1).getText();
 
             return formatContent(content);
         }
